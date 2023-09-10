@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * This function prints out a text to the stdo
- *  Returns zero for a success
+ * main - This function prints out a text to the stdo
+ *  Return: 0 (success)
 */
 int main(void)
 {
