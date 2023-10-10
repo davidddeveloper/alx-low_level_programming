@@ -2,4 +2,3 @@
 /*
  * Functions Prototype 
  */
-int _putchar(char c[]);
