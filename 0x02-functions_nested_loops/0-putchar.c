@@ -3,4 +3,8 @@
  * main - print _putchar followed by a new line
  * return(0) - Success
  */
-_putchar("_putchar");
+int main(void)
+{
+	_putchar("_putchar");
+	return (0);
+};
