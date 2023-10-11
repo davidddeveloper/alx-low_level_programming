@@ -7,12 +7,12 @@
  */
 int _islower(int c)
 {
-	int i, l;
+	int l;
 
 	l = 'a';
-	while (a <= 'z')
+	while (l <= 'z')
 	{
-		if (c == a)
+		if (c == l)
 			return (1);
 		l++;
 	}
