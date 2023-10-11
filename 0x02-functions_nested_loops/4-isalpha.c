@@ -7,13 +7,21 @@
  */
 int _isalpha(int c)
 {
-	int l;
+	int u, l;
 
-	l = 'A';
-	while (l <= 'Z')
+	u = 'A';
+	l = 'a';
+	while (l <= 'z')
 	{
 		if (c == l)
 			return (1);
+		else if (c != l)
+			while (u <= 'Z')
+			{
+				if (c == u)
+					return (1);
+				u++;
+			}
 		l++;
 	}
 	return (0);
