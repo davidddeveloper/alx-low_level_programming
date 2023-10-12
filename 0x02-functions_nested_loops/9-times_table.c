@@ -37,12 +37,13 @@ void times_table(void)
 			if (j < 9)
 			{
 				_putchar(',');
-				if (produce > 9)
+				if (product <= 9)
 				{
 					_putchar(' ');
 					_putchar(' ');
 				}
-				_putchar(' ');
+				else
+					_putchar(' ');
 			}
 			j++;
 		}
