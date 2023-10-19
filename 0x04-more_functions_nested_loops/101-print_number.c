@@ -24,7 +24,7 @@ void print_number(int n)
 	f = c % 10; /* Last character of c = 4 */
 	if ((n > 0 && n < 9) || n == 0)
 		_putchar(n + '0');
-	if ((n > 9 && n <= 99) || n < 0)
+	if (n > 9 && n <= 99)
 	{
 		if (l < 0) /* if the number is negative */
 			_putchar('-');
@@ -33,6 +33,8 @@ void print_number(int n)
 	}
 	if (n > 99 && n <= 999)
 	{
+		if (l < 0) /* if the number is negative */
+			_putchar('-');
 		_putchar(c + '0');
 		_putchar(d + '0');
 		_putchar(b + '0');
