@@ -9,8 +9,8 @@
  */
 void prime_factor(void)
 {
-	int i;
-	unsigned long long n, quotient;
+	unsigned long i;
+	unsigned long n, quotient;
 
 	n = 612852475143;
 	while (i < n)
@@ -19,7 +19,7 @@ void prime_factor(void)
 			quotient = n / i;
 		i++;
 	}
-	printf("Largest factor: %llu\n", quotient);
+	printf("%lu\n", quotient);
 }
 
 int main(void)
