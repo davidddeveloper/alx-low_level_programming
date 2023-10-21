@@ -1,13 +1,14 @@
 #include <stdio.h>
 /**
- * prime_factor - prints the largest prime factor
+ * main - prints the largest prime factor
+ * Return: 0 Success
  * WHILE i < n
  * 	if n % i === 0
  * 		quotient = n / i;
  * 	i++	
  * PRINT quotient		
  */
-void prime_factor(void)
+int main(void)
 {
 	unsigned long i;
 	unsigned long n, quotient;
@@ -21,5 +22,6 @@ void prime_factor(void)
 			quotient = i;
 		i++;
 	}
-	printf("\n%llu\n", quotient);
+	printf("\n%lu\n", quotient);
+	return (0);
 }
