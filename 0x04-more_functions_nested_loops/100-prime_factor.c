@@ -3,8 +3,8 @@
  * main - prints the largest prime factor
  * Return: 0 Success
  * WHILE i < n
- * if n % i === 0
- * quotient = n / i;
+ * if remainder of n / i === 0
+ * quotient = i
  * i++
  * PRINT quotient
  */
@@ -19,7 +19,9 @@ int main(void)
 	{
 		printf("inside loop");
 		if (n % i == 0)
+		{
 			quotient = i;
+		}
 		i++;
 	}
 	printf("\n%lu\n", quotient);
