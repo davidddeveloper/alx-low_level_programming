@@ -16,15 +16,10 @@ void prime_factor(void)
 	i = 1;
 	while (i < n)
 	{
-		if ((n % i) == 0)
-			quotient = n / i;
+		printf("inside loop");
+		if (n % i == 0)
+			quotient = i;
 		i++;
 	}
-	printf("%lu\n", quotient);
-}
-
-int main(void)
-{
-	prime_factor();
-	return (0);
+	printf("\n%llu\n", quotient);
 }
