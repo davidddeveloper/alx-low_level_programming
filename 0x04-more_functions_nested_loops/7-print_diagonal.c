@@ -13,8 +13,9 @@ void print_diagonal(int n)
 			_putchar(' ');
 
 		_putchar('\\');
-		_putchar('\n');
+		if (i != 9)
+			_putchar('\n');
 	}
-	if ((n <= 0) && (i < n))
+	if ((n <= 0))
 		_putchar('\n');
 }
