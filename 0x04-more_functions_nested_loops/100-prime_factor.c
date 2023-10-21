@@ -3,10 +3,10 @@
  * main - prints the largest prime factor
  * Return: 0 Success
  * WHILE i < n
- * 	if n % i === 0
- * 		quotient = n / i;
- * 	i++	
- * PRINT quotient		
+ * if n % i === 0
+ * quotient = n / i;
+ * i++
+ * PRINT quotient
  */
 int main(void)
 {
