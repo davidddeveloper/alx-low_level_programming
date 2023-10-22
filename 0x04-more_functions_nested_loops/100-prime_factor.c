@@ -14,13 +14,14 @@ int main(void)
 	unsigned long n, quotient;
 
 	n = 612852475143;
-	i = 1;
-	while (i < n)
+	i = 2;
+	while (n > 1)
 	{
-		printf("inside loop");
 		if (n % i == 0)
 		{
 			quotient = i;
+			while (n % i == 0)
+				n /= i;
 		}
 		i++;
 	}
