@@ -25,6 +25,6 @@ int main(void)
 		}
 		i++;
 	}
-	printf("\n%lu\n", quotient);
+	printf("%lu\n", quotient);
 	return (0);
 }
