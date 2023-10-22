@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_line - prints a straight line
- * @n: A number that specifies the number of time the character _ should be printed out
+ * @n: A number that specifies the number of time _ should be printed out
  * Return: 0 success
  */
 void print_line(int n)
