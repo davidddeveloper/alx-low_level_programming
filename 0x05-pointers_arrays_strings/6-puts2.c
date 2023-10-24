@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
  * puts2 - prints every other character starting from 0
@@ -11,7 +12,7 @@ void puts2(char *str)
 
 	for (i = 0; str[i] != '\0'; i += 2)
 	{
-		if (str[i] != '\0')
+		if (str[i] != _strlen(str))
 			_putchar(str[i]);
 	}
 	_putchar('\n');
