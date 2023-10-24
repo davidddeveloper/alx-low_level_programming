@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * puts2 - prints every other character starting from 0 escaping the next character
+ * puts2 - prints every other character starting from 0
+ * escaping the next character
  * @str: string
  */
 void puts2(char *str)
