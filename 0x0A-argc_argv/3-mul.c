@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * main - multiply two numbers
  * @argc: the number of arguments
@@ -9,13 +9,11 @@
  */
 int main(int argc, char **argv)
 {
-	int sum;
-
-	if (argc <= 3)
+	if (argc < 3)
 	{
 		printf("Error\n");
 		return (10);
 	}
-	sum = argv[1] * argv[2];
+	printf("%d", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
