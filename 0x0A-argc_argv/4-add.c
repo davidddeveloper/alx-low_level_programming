@@ -9,22 +9,24 @@
  */
 int main(int argc, char **argv)
 {
-	int sum = 0;
+	int sum, count;
 
-	if (argc > 1)
+	sum = 0;
+	count = 1;
+	while (count < argc)
 	{
-		while (argc--)
+		if (atoi(argv[count]) > 0)
+			sum += atoi(argv[count]);
+		else
 		{
-			if (atoi(argv[argc]) > 0)
-				sum += atoi(*argv++);
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
-		printf("%d\n", sum);
+		count++;
 	}
-	printf("%d\n", 0);
+	if (argc == 1)
+		printf("0\n");
+	else
+		printf("%d\n", sum);
 	return (0);
 }
