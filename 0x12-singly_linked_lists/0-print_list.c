@@ -8,9 +8,7 @@
 size_t print_list(const list_t *h)
 {
 	int i;
-	const list_t *temp;
-	temp = malloc (sizeof(list_t));
-	temp = h;
+	const list_t *temp = h;
 
 	i = 0;
 	while (temp != NULL)
