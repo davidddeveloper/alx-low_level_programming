@@ -10,7 +10,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	size_t idx;
 	listint_t *temp, *current;
-	
+
 	current = malloc(sizeof(listint_t));
 	current->next = NULL;
 	temp = *head;
@@ -23,7 +23,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			temp = NULL;
 			print_listint(*head);
 			free(temp);
-			return(1);
+			return (1);
 		}
 		idx++;
 		temp = temp->next;
