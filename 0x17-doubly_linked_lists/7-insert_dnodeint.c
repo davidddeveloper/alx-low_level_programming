@@ -9,23 +9,26 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node = malloc(sizeof(dlistint_t));
+	dlistint_t *head = *h, *temp, *temp_two, *new_node = malloc(sizeof(dlistint_t));
 	unsigned int i;
 
-	i = 0;
-	while ((*h) != NULL)
+	i = 1;
+	while (head != NULL)
 	{
-		if (i = idx)
+		if (i == idx)
 			break;
-		*h = (*h)->next;
+		head = head->next;
 		i++;
 	}
 
+	printf("value at idx - %d is %d", i, head->n);
 	new_node->n = n;
-	new_node->next = h->prev;
-	h->prev->next = new_node;
-	h->prev = new_node;
-
-	h = new_node;
+	temp = (*h)->next;
+	temp_two = (*h);
+	new_node->next = temp;
+	new_node->prev = temp_two;
+	temp_two->next = new_node;
+	new_node->prev = temp_two;
+	
 	return (new_node);
 }
