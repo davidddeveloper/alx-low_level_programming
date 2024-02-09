@@ -52,10 +52,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		free(node->key);
+		/*free(node->key);
 		free(node->value);
 		free(node);
-		free(current_node->value);
+		free(current_node->value);*/
 		current_node->value = (char *)value;
 	}
 	return (1);
