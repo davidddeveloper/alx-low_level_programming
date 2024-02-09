@@ -13,6 +13,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index;
 	hash_node_t const *node;
 
+	if (ht == NULL) /* hash table not created yet */
+		exit(1); /* exits the program */
+
 	index = key_index((unsigned char *)key, ht->size); /* index for the key */
 	node = ht->array[index]; /* node associated with index in hash_table */
 
