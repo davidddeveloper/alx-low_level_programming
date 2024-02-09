@@ -40,11 +40,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = node; /* inserts the data to the table */
+		free(node->key);
 		return (1);
 	}
 	/* handle collision */
 	current_node = ht->array[index];
-	free(node->key);
 	if (current_node->key != node->key)
 	{
 		node->next = current_node;
