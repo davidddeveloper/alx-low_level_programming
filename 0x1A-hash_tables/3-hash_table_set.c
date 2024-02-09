@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	node->value = strdup(value);
-	node->key = (char *)key;
+	node->key = strdup(key);
 	node->next = NULL;
 
 	/* generates an index key */
@@ -44,7 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	/* handle collision */
 	current_node = ht->array[index];
-	if (current_node->key != node->key)
+	if (current_node->key != key)
 	{
 		node->next = current_node;
 		current_node = node;
