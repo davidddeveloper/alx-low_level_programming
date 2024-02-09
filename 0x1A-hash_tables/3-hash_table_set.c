@@ -44,7 +44,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	/* handle collision */
 	current_node = ht->array[index];
-	if (current_node->key != key)
+	free(node->key);
+	if (current_node->key != node->key)
 	{
 		node->next = current_node;
 		current_node = node;
