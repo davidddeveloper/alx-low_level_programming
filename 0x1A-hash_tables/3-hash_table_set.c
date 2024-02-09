@@ -24,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	node->value = strdup(value);
-	node->key = strdup(key);
+	node->key = (char *)key;
 	node->next = NULL;
 	/* generates an index key */
 	index = key_index((unsigned char *)node->key, ht->size);
@@ -43,7 +43,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		free(node->key);
 		free(node->value);
 		free(node);
 		free(current_node->value);
