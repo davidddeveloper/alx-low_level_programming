@@ -8,6 +8,7 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
+	unsigned long int i;
 	hash_node_t *node;
 	hash_node_t **items;
 	hash_node_t *prev_node;
@@ -17,7 +18,7 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 
 	items = ht->array;
-	for (unsigned long int i = 0; i < ht->size; i++)
+	for (i = 0; i < ht->size; i++)
 	{
 		node = items[i];
 		first_node = items[i];
