@@ -19,18 +19,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* if memory has not been allocated for the table */
 	if (ht == NULL)
 	{
-		/*free(node);*/
+		free(node);
 		return (0);
 	}
 	/* handle if malloc failed */
 	if (node == NULL)
 	{
-		/*free(node);*/
+		free(node);
 		return (0);
 	}
 
-	node->key = strdup(key);
-	node->value = strdup(value);
+	node->key = (char *)key;
+	node->value = (char *)value;
 	node->next = NULL;
 
 	/* generates an index key */
@@ -52,10 +52,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		/*free(node->key);
+		free(node->key);
 		free(node->value);
 		free(node);
-		free(current_node->value);*/
+		free(current_node->value);
 		current_node->value = strdup(value);
 	}
 	return (1);
