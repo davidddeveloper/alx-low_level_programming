@@ -41,5 +41,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current_node = node;
 		ht->array[index] = current_node;
 	}
+	else
+	{
+		current_node->value = (char *)value;
+	}
 	return (1);
 }
