@@ -19,13 +19,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* if memory has not been allocated for the table */
 	if (ht == NULL)
 	{
-		free(node);
+		/*free(node);*/
 		return (0);
 	}
 	/* handle if malloc failed */
 	if (node == NULL)
 	{
-		free(node);
+		/*free(node);*/
 		return (0);
 	}
 
@@ -44,8 +44,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	/* handle collision */
 	current_node = ht->array[index];
-	free(node->key);
-	node->key = (char *)key;
 	if (current_node->key != node->key)
 	{
 		node->next = current_node;
@@ -54,9 +52,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
+		/*free(node->key);
 		free(node->value);
 		free(node);
-		free(current_node->value);
+		free(current_node->value);*/
 		current_node->value = strdup(value);
 	}
 	return (1);
